@@ -84,23 +84,23 @@ class UsersSeeder extends Seeder
         $merchants = [
             [
                 'name' => 'ATM',
-                'alias' => 'ALIAS_WEB_00005085',
-                'secret' => 'AJKY7UZJQ9GHLLS57QAMO0NUCIPQZUVR'
+                'alias' => 'ALIAS_RICO_00005086',
+                'secret' => 'QDUUZFXRG6SEZ26OYSE81CJDES73U3Y5'
             ], 
             [
                 'name' => 'The Space Cinema',
-                'alias' => 'ALIAS_WEB_00005085',
-                'secret' => 'AJKY7UZJQ9GHLLS57QAMO0NUCIPQZUVR'
+                'alias' => 'ALIAS_RICO_00005086',
+                'secret' => 'QDUUZFXRG6SEZ26OYSE81CJDES73U3Y5'
             ], 
             [
                 'name' => 'parking',
-                'alias' => 'ALIAS_WEB_00005085',
-                'secret' => 'AJKY7UZJQ9GHLLS57QAMO0NUCIPQZUVR'
+                'alias' => 'ALIAS_RICO_00005086',
+                'secret' => 'QDUUZFXRG6SEZ26OYSE81CJDES73U3Y5'
             ],
             [
                 'name' => 'GAS',
-                'alias' => 'ALIAS_WEB_00005085',
-                'secret' => 'AJKY7UZJQ9GHLLS57QAMO0NUCIPQZUVR'
+                'alias' => 'ALIAS_RICO_00005086',
+                'secret' => 'QDUUZFXRG6SEZ26OYSE81CJDES73U3Y5'
             ], 
         ];
 

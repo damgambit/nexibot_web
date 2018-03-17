@@ -79,6 +79,7 @@ class NexibotController extends Controller
 		$divisa = "EUR";
 		$importo = $amount;
 
+
 		// Calcolo MAC
 		$mac = sha1('codTrans=' . $codTrans . 'divisa=' . $divisa . 'importo=' . $importo . $CHIAVESEGRETA);
 
@@ -90,7 +91,11 @@ class NexibotController extends Controller
 		    'codTrans' => $codTrans,
 		    'url' => $merchantServerUrl . "success",
 		    'url_back' => "about:blank",
-		    'mac' => $mac,   
+		    'mac' => $mac,  
+		    'num_contratto' => $telegram_id, 
+		    'tipo_servizio' => 'paga_multi',
+		    'tipo_richiesta' => 'PR',
+		    'gruppo' => 'GRP_06893', //se crea problemi CHECK HERE
 		);
 
 

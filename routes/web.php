@@ -73,7 +73,7 @@ Route::get('/api/v1/callback/success', 'NexibotController@success_callback');
 
 
 
-
+Route::get('/transactions', 'TransactionController@index');
 
 
 Route::get('/', 'HomeController@index');

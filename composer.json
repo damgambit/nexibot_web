@@ -31,7 +31,8 @@
         "laravel/framework": "5.5.*",
         "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0",
-        "laravelcollective/html": "5.5.*"
+        "laravelcollective/html": "5.5.*",
+        "unreal4u/telegram-api": "~3.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

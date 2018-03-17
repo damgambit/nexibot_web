@@ -10,6 +10,10 @@ use App\Merchant;
 use App\Product;
 use App\Transaction;
 
+use \unreal4u\TelegramAPI\HttpClientRequestHandler;
+use \unreal4u\TelegramAPI\TgLog;
+use \unreal4u\TelegramAPI\Telegram\Methods\SendMessage;
+
 class NexibotController extends Controller
 {
    
@@ -36,7 +40,7 @@ class NexibotController extends Controller
 		$product_name = $request->product_name;
 		$amount = $request->amount;
 		
-		$tx_id = "nexibot_tx_" . date('YmdHis') . '_' . $telegram_id;
+		$tx_id = date('YmdHis') . '_' . $telegram_id;
 
 
 		$telegram_user = TelegramUser::firstOrCreate(['id' => $telegram_id]);
@@ -125,6 +129,19 @@ class NexibotController extends Controller
 
 
 		if($esito == 'OK') {
+
+
+
+			$loop = \React\EventLoop\Factory::create();
+			$handler = new HttpClientRequestHandler($loop);
+			$tgLog = new TgLog('512374068:AAEHnKIP_4MbgqnU9ElNadUazFGrLIR2H84', $handler);
+
+			$sendMessage = new SendMessage();
+			$sendMessage->chat_id = A_USER_CHAT_ID;
+			$sendMessage->text = 'Hello world!';
+
+			$tgLog->performApiRequest($sendMessage);
+			$loop->run();
 
 		} else {
 

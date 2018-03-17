@@ -32,7 +32,7 @@ class TransactionController extends Controller
 							->orderBy('created_at', 'desc')
 							->first();
 		$product = Product::where(['id' => $transaction->product_id])->first();
-		$product = Merchant::where(['id' => $product->merchant_id])->first();
+		$merchant = Merchant::where(['id' => $product->merchant_id])->first();
 
 		if($transaction->status == "OK") {
 			echo "Success_".$transaction->id.'_'.$product->name.'_'.$transaction->amount.'_'.$merchant->name;

@@ -70,6 +70,10 @@ class UsersSeeder extends Seeder
             [
                 'merchant_id' => 3,
                 'name' => 'parcheggio_ore'
+            ],
+            [
+                'merchant_id' => 4,
+                'name' => 'benzina'
             ]
         ];
 
@@ -90,6 +94,11 @@ class UsersSeeder extends Seeder
             ], 
             [
                 'name' => 'parking',
+                'alias' => 'ALIAS_WEB_00005085',
+                'secret' => 'AJKY7UZJQ9GHLLS57QAMO0NUCIPQZUVR'
+            ],
+            [
+                'name' => 'GAS',
                 'alias' => 'ALIAS_WEB_00005085',
                 'secret' => 'AJKY7UZJQ9GHLLS57QAMO0NUCIPQZUVR'
             ], 

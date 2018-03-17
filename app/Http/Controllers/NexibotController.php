@@ -128,25 +128,17 @@ class NexibotController extends Controller
 									->update(['status' => $esito]);
 
 
-		if($esito == 'OK') {
+
+	}
 
 
+	function check($telegram_user_id)
 
-			$loop = \React\EventLoop\Factory::create();
-			$handler = new HttpClientRequestHandler($loop);
-			$tgLog = new TgLog('512374068:AAEHnKIP_4MbgqnU9ElNadUazFGrLIR2H84', $handler);
+	{
 
-			$sendMessage = new SendMessage();
-			$sendMessage->chat_id = A_USER_CHAT_ID;
-			$sendMessage->text = 'Hello world!';
+		$transaction = Transaction::where(['id' => $telegram_user_id])->get();
 
-			$tgLog->performApiRequest($sendMessage);
-			$loop->run();
-
-		} else {
-
-		}
-
+		dd($transaction);
 
 	}
 

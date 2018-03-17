@@ -6,5 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    //
+
+	protected $fillable = [
+
+		'name',
+		'price',
+		'merchant_id',
+		'locked'
+
+	];    
+
 }

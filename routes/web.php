@@ -74,9 +74,22 @@ Route::get('/api/v1/callback/success', 'NexibotController@success_callback');
 
 
 Route::get('/transactions', 'TransactionController@index');
-Route::get('/products', 'ProductController@index');
 Route::get('/merchants', 'MerchantController@index');
 Route::get('/transactions/check/{telegram_user_id}', 'TransactionController@check');
+
+
+Route::get('/products', 'ProductController@index');
+
+Route::get('/locked_products', 'ProductController@locked_index')->name('locked_products');
+Route::get('/dynamic_products', 'ProductController@dynamic_index')->name('dynamic_products');
+Route::post('/create_product', 'ProductController@create')->name('create_product');
+Route::get('/show_qr/{product_id}', 'ProductController@show_qr')->name('show_qr');
+Route::post('/show_qr', 'ProductController@show_dynamic_qr')->name('show_dynamic_qr');
+
+
+Route::get('/validate_confirmation', 'TransactionController@validate_confirmation')->name('validate_confirmation');
+Route::post('/check_qr_conf', 'TransactionController@check_qr_conf')->name('check_qr_conf');
+Route::get('/user/transactions', 'TransactionController@user_transactions')->name('transactions');
 
 
 

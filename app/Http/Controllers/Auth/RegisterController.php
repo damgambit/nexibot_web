@@ -11,7 +11,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Ramsey\Uuid\Uuid;
-
+use App\Merchant;
 class RegisterController extends Controller
 {
     /*
@@ -32,7 +32,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/user';
 
     /**
      * Create a new controller instance.
@@ -79,7 +79,13 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'confirmation_code' => Uuid::uuid4(),
-            'confirmed' => false
+            'confirmed' => true
+        ]);
+
+        $merchant = Merchant::create([
+            'name' => $data['name'],
+            'alias' => 'ALIAS_RICO_00005086',
+            'secret' => 'QDUUZFXRG6SEZ26OYSE81CJDES73U3Y5'
         ]);
 
         if (config('auth.users.default_role')) {
@@ -120,7 +126,7 @@ class RegisterController extends Controller
 
             $this->guard()->logout();
 
-            $user->notify(new ConfirmEmail());
+            // $user->notify(new ConfirmEmail());
 
             return redirect(route('login'));
         }

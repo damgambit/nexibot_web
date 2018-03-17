@@ -17,6 +17,8 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->integer('merchant_id')->unsigned();
             $table->string('name');
+            $table->boolean('locked')->default(1);
+            $table->double('price');
             $table->timestamps();
         });
     }

@@ -9,6 +9,8 @@ use App\Transaction;
 use App\Product;
 use App\Merchant;
 
+use DB;
+
 class TransactionController extends Controller
 
 {
@@ -20,6 +22,38 @@ class TransactionController extends Controller
 		$transactions = Transaction::all();
 
 		return view('transaction.index', ['transactions' => $transactions]);
+
+	}
+
+
+	public function user_transactions()
+
+	{
+
+		$transactions = DB::table('transactions')
+            ->join('products', 'transactions.product_id', '=', 'products.id')
+            ->join('merchants', 'merchants.id', '=', 'products.merchant_id')
+            ->get();
+
+		return view('transaction.index', ['transactions' => $transactions]);
+
+	}
+
+
+	public function validate_confirmation()
+
+	{
+
+		return view('transactions.validate_transaction');
+
+	}
+
+
+	public function check_qr_conf(Request $request) 
+
+	{
+
+		return view('transactions.confirmed');
 
 	}
 

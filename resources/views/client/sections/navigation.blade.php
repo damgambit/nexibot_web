@@ -24,6 +24,30 @@
                             {{ __('views.backend.section.navigation.menu_0_1') }}
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('locked_products') }}">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            Prodotti fissi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('dynamic_products') }}">
+                            <i class="fa fa-unlock" aria-hidden="true"></i>
+                            Prodotti dinamici
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('validate_confirmation') }}">
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            Verifica pagamento
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('transactions') }}">
+                            <i class="fa fa-list" aria-hidden="true"></i>
+                            Transazioni
+                        </a>
+                    </li>
                 </ul>
             </div>
             

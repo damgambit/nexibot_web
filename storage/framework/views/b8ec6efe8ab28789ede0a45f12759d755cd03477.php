@@ -25,6 +25,30 @@
 
                         </a>
                     </li>
+                    <li>
+                        <a href="<?php echo e(route('locked_products')); ?>">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            Prodotti fissi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo e(route('dynamic_products')); ?>">
+                            <i class="fa fa-unlock" aria-hidden="true"></i>
+                            Prodotti dinamici
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo e(route('validate_confirmation')); ?>">
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            Verifica pagamento
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo e(route('transactions')); ?>">
+                            <i class="fa fa-list" aria-hidden="true"></i>
+                            Transazioni
+                        </a>
+                    </li>
                 </ul>
             </div>
             

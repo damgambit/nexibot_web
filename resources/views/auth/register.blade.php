@@ -11,7 +11,7 @@
                         <h1>{{ __('views.auth.register.header') }}</h1>
                         <div>
                             <input type="text" name="name" class="form-control"
-                                   placeholder="{{ __('views.auth.register.input_0') }}"
+                                   placeholder="Name"
                                    value="{{ old('name') }}" required autofocus/>
                         </div>
                         <div>

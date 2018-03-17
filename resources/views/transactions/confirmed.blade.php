@@ -4,6 +4,7 @@
     <!-- page content -->
     <div class="container">
     
+    	<h2>Transazione confermata</h2>
 
 	</div>
     

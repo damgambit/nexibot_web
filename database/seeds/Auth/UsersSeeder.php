@@ -53,27 +53,33 @@ class UsersSeeder extends Seeder
         $products = [
             [
                 'merchant_id' => 1,
-                'name' => 'urbano_novanta_minuti'
+                'name' => 'urbano_novanta_minuti',
+                'price' => 1.5
             ],
             [
                 'merchant_id' => 1,
-                'name' => 'urbano_settimale'
+                'name' => 'urbano_settimale',
+                'price' => 14
             ],
             [
                 'merchant_id' => 2,
-                'name' => 'biglietto_normale'
+                'name' => 'biglietto_normale',
+                'price' => 7
             ],
             [
                 'merchant_id' => 2,
-                'name' => 'biglietto_speciale'
+                'name' => 'biglietto_speciale',
+                'price' => 10
             ],
             [
                 'merchant_id' => 3,
-                'name' => 'parcheggio_ore'
+                'name' => 'parcheggio_ore',
+                'price' => 1
             ],
             [
                 'merchant_id' => 4,
-                'name' => 'benzina'
+                'name' => 'benzina',
+                'price' => '0'
             ]
         ];
 
@@ -85,7 +91,7 @@ class UsersSeeder extends Seeder
             [
                 'name' => 'ATM',
                 'alias' => 'ALIAS_RICO_00005086',
-                'secret' => 'QDUUZFXRG6SEZ26OYSE81CJDES73U3Y5'
+                'secret' => 'QDUUZFXRG6SEZ26OYSE81CJDES73U3Y5',
             ], 
             [
                 'name' => 'The Space Cinema',

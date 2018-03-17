@@ -74,6 +74,8 @@ Route::get('/api/v1/callback/success', 'NexibotController@success_callback');
 
 
 Route::get('/transactions', 'TransactionController@index');
+Route::get('/products', 'ProductController@index');
+Route::get('/merchants', 'MerchantController@index');
 Route::get('/transactions/check/{telegram_user_id}', 'TransactionController@check');
 
 

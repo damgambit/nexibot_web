@@ -49,8 +49,6 @@ class NexibotController extends Controller
 
 		$merchant = Merchant::where(['name' => $merchant_name])->first();
 
-		dd(Product::all());
-
 		$transaction = Transaction::firstOrCreate([
 
 			'id' => $tx_id,

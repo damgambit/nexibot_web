@@ -35,11 +35,11 @@ class TransactionController extends Controller
 		$merchant = Merchant::where(['id' => $product->merchant_id])->first();
 
 		if($transaction->status == "OK") {
-			echo "Success_".$transaction->id.'_'.$product->name.'_'.$transaction->amount.'_'.$merchant->name;
+			echo "Success?".$transaction->id.'?'.$product->name.'?'.$transaction->amount.'?'.$merchant->name;
 		} else if ($transaction->status = "none") {
-			echo "Pending_".$transaction->id.'_'.$product->name.'_'.$transaction->amount.'_'.$merchant->name;
+			echo "Pending?".$transaction->id.'?'.$product->name.'?'.$transaction->amount.'?'.$merchant->name;
 		} else {
-			echo "Failed_".$transaction->id.'_'.$product->name.'_'.$transaction->amount.'_'.$merchant->name;
+			echo "Failed?".$transaction->id.'?'.$product->name.'?'.$transaction->amount.'?'.$merchant->name;
 		}
 
 	}

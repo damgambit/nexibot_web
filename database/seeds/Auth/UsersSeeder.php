@@ -20,11 +20,13 @@ class UsersSeeder extends Seeder
     {
         $this->disableForeignKeys();
         $this->truncate('users');
+        $this->truncate('products');
+        $this->truncate('merchants');
 
         $users = [
             [
                 'name' => 'Admin',
-                'email' => 'admin.laravel@labs64.com',
+                'email' => 'admin@admin.com',
                 'password' => bcrypt('admin'),
                 'active' => true,
                 'confirmation_code' => \Ramsey\Uuid\Uuid::uuid4(),

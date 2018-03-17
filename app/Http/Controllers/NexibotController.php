@@ -113,11 +113,13 @@ class NexibotController extends Controller
 
 	{
 
+		dd($request);
+
 
 		$codTrans = $request->codTrans;
 
 
-		$transaction = Transaction::find(['id' => $codTrans])->first();
+		$transaction = Transaction::where(['id' => $codTrans]);
 		$transaction->status = $transaction->esito;
 		$transaction->save();
 

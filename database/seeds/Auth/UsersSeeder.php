@@ -71,7 +71,7 @@ class UsersSeeder extends Seeder
 
 
 
-        $merchant = [
+        $merchants = [
             [
                 'name' => 'ATM',
                 'alias' => 'ALIAS_WEB_00005085',
@@ -83,6 +83,9 @@ class UsersSeeder extends Seeder
                 'secret' => 'AJKY7UZJQ9GHLLS57QAMO0NUCIPQZUVR'
             ], 
         ];
+
+        DB::table('merchants')->insert($merchants);
+
 
 
 

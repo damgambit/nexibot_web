@@ -9,7 +9,7 @@
 		</div>
 
 
-		<table class="table-bordered table-hover table-responsive col-lg-8">
+		<table class="table table-bordered table-hover table-responsive col-lg-8">
 
 			<thead>
 				<th>id</th>

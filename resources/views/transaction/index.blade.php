@@ -1,4 +1,3 @@
-@extends('client.layouts.admin')
 
 @section('content')
     <!-- page content -->

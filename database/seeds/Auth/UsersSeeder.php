@@ -46,6 +46,46 @@ class UsersSeeder extends Seeder
 
         DB::table('users')->insert($users);
 
+
+
+        $products = [
+            [
+                'merchant_id' => 1,
+                'name' => 'urbano_novanta_minuti'
+            ],
+            [
+                'merchant_id' => 1,
+                'name' => 'urbano_settimale'
+            ],
+            [
+                'merchant_id' => 2,
+                'name' => 'biglietto_normale'
+            ],
+            [
+                'merchant_id' => 2,
+                'name' => 'biglietto_speciale'
+            ]
+        ];
+
+        DB::table('products')->insert($products);
+
+
+
+        $merchant = [
+            [
+                'name' => 'ATM',
+                'alias' => 'ALIAS_WEB_00005085',
+                'secret' => 'AJKY7UZJQ9GHLLS57QAMO0NUCIPQZUVR'
+            ], 
+            [
+                'name' => 'The Space Cinema',
+                'alias' => 'ALIAS_WEB_00005085',
+                'secret' => 'AJKY7UZJQ9GHLLS57QAMO0NUCIPQZUVR'
+            ], 
+        ];
+
+
+
         $this->enableForeignKeys();
     }
 }

@@ -104,7 +104,7 @@ class NexibotController extends Controller
 		$redirectUrl = $requestUrl . "?" . $stringRequestParams;
 
 
-		dd($redirectUrl);
+		echo $redirectUrl;
 	}
 
 
@@ -117,13 +117,19 @@ class NexibotController extends Controller
 
 
 		$codTrans = $request->codTrans;
+		$esito = $request->esito;
 
 
 		$transaction = Transaction::where(['id' => $codTrans])
-									->update(['status' => $request->esito]);
+									->update(['status' => $esito]);
 
 
-		dd($transaction);
+		if($esito == 'OK') {
+
+		} else {
+
+		}
+
 
 	}
 

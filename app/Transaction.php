@@ -14,7 +14,8 @@ class Transaction extends Model
 		'telegram_user_id',
 		'product_id',
 		'currency',
-		'amount'
+		'amount',
+		'status'
 
 	];
 

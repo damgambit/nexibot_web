@@ -69,6 +69,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
 
 Route::post('/api/v1/generate_link', 'NexibotController@create_link');
+Route::get('/api/v1/callback/success', 'NexibotController@success_callback');
 
 
 

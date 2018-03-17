@@ -59,6 +59,8 @@ class NexibotController extends Controller
 
 			'amount' => $amount / 100,
 
+			'status' => 'none'
+
 		]);
 
 
@@ -103,6 +105,17 @@ class NexibotController extends Controller
 
 
 		dd($redirectUrl);
+	}
+
+
+
+	function success_callback(Request $request) 
+
+	{
+
+
+
+
 	}
 
 

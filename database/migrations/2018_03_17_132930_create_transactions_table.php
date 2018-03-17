@@ -18,6 +18,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('telegram_user_id')->nullable();
             $table->double('amount');
             $table->string('currency');
+            $table->string('status');
             $table->integer('product_id')->unsigned();
             $table->timestamps();
             $table->primary('id');

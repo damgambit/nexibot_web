@@ -49,7 +49,7 @@ class NexibotController extends Controller
 
 		$merchant = Merchant::where(['name' => $merchant_name])->first();
 
-
+		dd(Product::all());
 
 		$transaction = Transaction::firstOrCreate([
 
@@ -132,7 +132,7 @@ class NexibotController extends Controller
 	}
 
 
-	
+
 
 
 }

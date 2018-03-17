@@ -64,6 +64,10 @@ class UsersSeeder extends Seeder
             [
                 'merchant_id' => 2,
                 'name' => 'biglietto_speciale'
+            ],
+            [
+                'merchant_id' => 3,
+                'name' => 'parcheggio_ore'
             ]
         ];
 
@@ -79,6 +83,11 @@ class UsersSeeder extends Seeder
             ], 
             [
                 'name' => 'The Space Cinema',
+                'alias' => 'ALIAS_WEB_00005085',
+                'secret' => 'AJKY7UZJQ9GHLLS57QAMO0NUCIPQZUVR'
+            ], 
+            [
+                'name' => 'parking',
                 'alias' => 'ALIAS_WEB_00005085',
                 'secret' => 'AJKY7UZJQ9GHLLS57QAMO0NUCIPQZUVR'
             ], 

@@ -132,15 +132,7 @@ class NexibotController extends Controller
 	}
 
 
-	function check($telegram_user_id)
-
-	{
-
-		$transaction = Transaction::where(['id' => $telegram_user_id])->get();
-
-		dd($transaction);
-
-	}
+	
 
 
 }

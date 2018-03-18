@@ -81,8 +81,9 @@ class UsersSeeder extends Seeder
                'name' => 'benzina',
                  'price' => '0'
              ]
-         ]
-         DB::table('products')->insert($products)
+         ];
+        
+        DB::table('products')->insert($products);
         $merchants = [
              [
                  'name' => 'ATM',

@@ -8,10 +8,10 @@
     <!-- page content -->
     <div class="container">
     
-    	<div class="col-lg-6 col-lg-offset-3">
+    	<div class="col-lg-6 col-lg-offset-1">
 
 
-			<img src="https://chart.googleapis.com/chart?chs=450x450&cht=qr&chl={{$message}}" title="Link to Google.com" />
+			<img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl={{$message}}" title="Link to Google.com" />
 
 
 		</div>

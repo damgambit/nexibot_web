@@ -79,7 +79,7 @@ class ProductController extends Controller
     	$product = Product::find($product_id);
 
 
-    	return view('products.show_qr', ['message' => '{action : '.$product->name.', args: '.$product->price.'}']);
+    	return view('products.show_qr', ['message' => '{"action" : "'.$product->name.'", "args": "'.$product->price.'"}']);
 
 
     }
@@ -89,7 +89,7 @@ class ProductController extends Controller
 
     {
 
-    	return view('products.show_qr', ['message' => '{action : '.$request->name.', args: '.$request->price.'}']);
+    	return view('products.show_qr', ['message' => '{"action" : "'.$request->name.'", "args": "'.$request->price.'"}']);
 
     }
 }

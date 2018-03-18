@@ -130,6 +130,8 @@ class NexibotController extends Controller
 		$transaction = Transaction::where(['id' => $codTrans])
 									->update(['status' => $esito]);
 
+		
+		echo "<script>close()</script>";
 
 
 	}

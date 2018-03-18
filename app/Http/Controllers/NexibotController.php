@@ -72,7 +72,7 @@ class NexibotController extends Controller
 
 		// TODO: URL da modificare sulla base dell'URL del backend
 		$requestUrl = "https://int-ecommerce.nexi.it/ecomm/ecomm/DispatcherServlet";
-		$merchantServerUrl = "https://" . $_SERVER['HTTP_HOST'] . "/api/v1/callback/";
+		$merchantServerUrl = "http://" . $_SERVER['HTTP_HOST'] . "/api/v1/callback/";
 
 		// Parametri da customizzare sulla base del QR code
 		$codTrans = $tx_id;
